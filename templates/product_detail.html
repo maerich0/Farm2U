@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Farm2U - {{ product['name'] }}{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-6">
+    <div class="col-md-6 mb-3">
+            <img src="{{ url_for('static', filename=product['image_path'].replace('static/', '')) }}"
+                 class="img-fluid rounded"
+                 style="max-height: 400px; object-fit: contain;"
+                 alt="{{ product['name'] }}">
+        </div>
+  </div>
+  <div class="col-md-6">
+    <h2>{{ product['name'] }}</h2>
+    <p><strong>Farm:</strong> {{ product['farm_name'] }}</p>
+    <p><strong>Price:</strong> ₱{{ product['price'] }}</p>
+    <p>
+      <span class="badge bg-success">{{ product['harvest_status'] }}</span>
+    </p>
+
+    <form method="POST" action="{{ url_for('add_to_cart') }}">
+      <input type="hidden" name="product_id" value="{{ product['product_id'] }}">
+
+      <label class="form-label">Quantity</label>
+      <div class="input-group mb-3" style="max-width: 160px;">
+            <button class="btn btn-outline-secondary" type="button"
+                onclick="this.nextElementSibling.stepDown()">−</button>
+            <input type="number"
+                name="quantity"
+                class="form-control text-center"
+                value="1"
+                min="1"
+                max="{{ product['stock'] }}">
+
+            <button class="btn btn-outline-secondary" type="button"
+                    onclick="this.previousElementSibling.stepUp()">+</button>
+        </div>
+
+
+      <button class="btn btn-success w-100">
+        Add to Cart
+      </button>
+    </form>
+  </div>
+</div>
+{% endblock %}

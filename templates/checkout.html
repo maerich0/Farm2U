@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Farm2U - Checkout{% endblock %}
+{% block content %}
+<h2 class="mb-4 text-center">Checkout</h2>
+
+{% if cart %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price (₱)</th>
+            <th>Quantity</th>
+            <th>Subtotal (₱)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for key, item in cart.items() %}
+        <tr>
+            <td>{{ item['name'] }}</td>
+            <td>{{ item['price'] }}</td>
+            <td>{{ item['quantity'] }}</td>
+            <td>{{ item['price'] * item['quantity'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h4>Total: ₱{{ total }}</h4>
+
+<form method="POST">
+    <div class="mb-3">
+        <label class="form-label">Apply Coupon</label>
+        <input type="text" name="coupon" class="form-control" placeholder="Enter coupon code">
+    </div>
+    <button type="submit" class="btn btn-success">Place Order</button>
+</form>
+{% else %}
+<p>Your cart is empty. <a href="{{ url_for('shop') }}">Shop now!</a></p>
+{% endif %}
+{% endblock %}

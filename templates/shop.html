@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}Farm2U - Shop{% endblock %}
+{% block content %}
+<h2 class="mb-4 text-center">Shop</h2>
+<div class="row">
+    {% for product in products %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+            <img src="{{ product['image_path'] }}" class="card-img-top" alt="{{ product['name'] }}">
+            <div class="card-body d-flex flex-column">
+                <h5 class="card-title">{{ product['name'] }}</h5>
+                <p class="card-text">₱{{ product['price'] }} per kg</p>
+                <p class="card-text"><small class="text-muted">{{ product['harvest_status'] }}</small></p>
+                <p><a href="{{ url_for('farmer_profile', farmer_id=product['farmer_id']) }}">{{ product['farm_name'] }}</a></p>
+                <a href="{{ url_for('product_detail', product_id=product['product_id']) }}"class="btn btn-outline-success">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

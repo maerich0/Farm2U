@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title %}Farm2U - Order Tracking{% endblock %}
+{% block content %}
+<h2 class="mb-4 text-center">Order Tracking</h2>
+
+{% if orders %}
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Items</th>
+            <th>Total Amount (₱)</th>
+            <th>Discount Applied (₱)</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+        <tr>
+            <td>{{ order['order_id'] }}</td>
+            <td>
+                <ul>
+                    {% for item in order_items(order['order_id']) %}
+                    <li>{{ item['name'] }} x{{ item['quantity'] }} - ₱{{ item['price_at_purchase'] * item['quantity'] }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+            <td>{{ order['total_amount'] }}</td>
+            <td>{{ order['discount_applied'] }}</td>
+            <td>{{ order['order_status'] }}</td>
+            <td>{{ order['order_date'] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>You have no orders yet.</p>
+{% endif %}
+{% endblock %}

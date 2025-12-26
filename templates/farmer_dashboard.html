@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Farm2U - Farmer Dashboard{% endblock %}
+{% block content %}
+<h2 class="mb-4 text-center">{{ farmer.farm_name }} Dashboard</h2>
+
+<a href="{{ url_for('add_product') }}" class="btn btn-success mb-3">Add New Product</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price (₱)</th>
+            <th>Stock</th>
+            <th>Harvest Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product['name'] }}</td>
+            <td>{{ product['price'] }}</td>
+            <td>{{ product['stock'] }}</td>
+            <td>
+                <span 
+                    class="badge 
+                    {% if product['harvest_status'] == 'Ready to Harvest' %}bg-success
+                    {% elif product['harvest_status'] == 'In Growth' %}bg-warning text-dark
+                    {% elif product['harvest_status'] == 'Harvested' %}bg-secondary
+                    {% else %}bg-light text-dark{% endif %}">
+                    {{ product['harvest_status'] }}
+                </span>
+            </td>
+            <td>
+                <a href="{{ url_for('edit_product', product_id=product['product_id']) }}" class="btn btn-primary btn-sm">Edit</a>
+                <a href="{{ url_for('delete_product', product_id=product['product_id']) }}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

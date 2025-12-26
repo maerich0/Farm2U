@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}{% if product %}Edit Product{% else %}Add Product{% endif %}{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-center">{% if product %}Edit Product{% else %}Add New Product{% endif %}</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label class="form-label">Product Name</label>
+        <input type="text" name="name" class="form-control" required
+               value="{% if product %}{{ product['name'] }}{% endif %}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Price (₱ per kg)</label>
+        <input type="number" step="0.01" name="price" class="form-control" required
+               value="{% if product %}{{ product['price'] }}{% endif %}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Stock</label>
+        <input type="number" name="stock" class="form-control" required
+               value="{% if product %}{{ product['stock'] }}{% endif %}">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Harvest Status</label>
+        <select name="harvest_status" class="form-control">
+            <option value="In Growth" {% if product and product['harvest_status'] == 'In Growth' %}selected{% endif %}>In Growth</option>
+            <option value="Ready to Harvest" {% if product and product['harvest_status'] == 'Ready to Harvest' %}selected{% endif %}>Ready to Harvest</option>
+            <option value="Harvested" {% if product and product['harvest_status'] == 'Harvested' %}selected{% endif %}>Harvested</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Image Path</label>
+        <input type="text" name="image_path" class="form-control"
+               value="{% if product %}{{ product['image_path'] }}{% endif %}"
+               placeholder="Optional, e.g., static/images/apple.jpg">
+    </div>
+    <button type="submit" class="btn btn-success">{% if product %}Update Product{% else %}Add Product{% endif %}</button>
+</form>
+{% endblock %}
