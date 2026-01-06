@@ -145,6 +145,128 @@ const products = [
         image: "assets/images/bp.jpg",
         sold: "10K+ sold",
         ownerId: "admin"
+    },
+    {
+        id: 14,
+        name: "Tilapia",
+        price: 120.00,
+        desc: "Fresh harvest tilapia. Great in protein for bone strength, vitamins like potassium and phosphorus.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/talapya.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 15,
+        name: "Chicken Breast",
+        price: 179.00,
+        desc: " Freshly harvest chicken breast, great for exercise for its protein content.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/breast.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 16,
+        name: "Crab",
+        price: 600.00,
+        desc: "Fresh captured crabs. Great for protein, vitamins, and omega-3 fatty acids. For red-blood cell production, lowering cholesterol, and support hearth health.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/crab.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 17,
+        name: "Oyster",
+        price: 210.00,
+        desc: "Fresh harvest oyster. Packed with nutrients like vitamins, protein, and fatty acids. Boosts immune system and antioxidants.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/oyster.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 18,
+        name: "Shrimp",
+        price: 360.00,
+        desc: "Great with minerals, vitamin, and antioxidants. Reduce inflammation,  antioxidants for skin, and bone health.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/shrimp.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    
+    {
+        id: 19,
+        name: "Salmon",
+        price: 650.00,
+        desc: " Freshly catch Salmon, contains omega-3 fatty acids and vitamins, great for brain health and nerve function.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/salmon.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 20,
+        name: "Tomahawk",
+        price: 1800.00,
+        desc: "A axe style specific cut of steak. Contains intense flavor of fat, protein, and vitamins.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/tomahawk.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 21,
+        name: "Whole Chicken",
+        price: 135.00,
+        desc: "Fresh harvest chicken, lived in stress-free environment and contains proteins, vitamin B and D.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/whole-chicken.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 22,
+        name: "Minced Beef",
+        price: 275.00,
+        desc: "High-quality minced-beef, great protein source for muscle, contain vitamins and minerals like iron and zinc.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/minced-beef.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 23,
+        name: "Minced Pork",
+        price: 220.00,
+        desc: "Newly harvest pork, contain protein and vitamins. Fined chopped and processed through a meat grinder.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/minced-pork.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
+    },
+    {
+        id: 24,
+        name: "Chicken Thigh",
+        price: 105.00,
+        desc: " Flavorful and juicy cut out of dark meat from the upper part of the chicken leg. Contain large amount of protein and minerals.",
+        reviews: "⭐⭐⭐⭐☆ (1.2k reviews)",
+        category: "meats",
+        image: "assets/images/chicken-thigh.jpg",
+        sold: "10K+ sold",
+        ownerId: "admin"
     }
 ];
 
