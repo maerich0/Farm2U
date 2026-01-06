@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm2U - Shop</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Farm<span>2U</span></a>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#" id="searchIcon"><i class="ri-search-line"></i></a>
+            
+            <a href="auth.html" id="user-btn"><i class="ri-user-line"></i></a>
+            
+            <a href="cart.html" style="position: relative;">
+                <i class="ri-shopping-cart-line"></i>
+                <span id="cartCount" style="display: none; background: red; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; position: absolute; top: -5px; right: -5px; display: flex; align-items: center; justify-content: center;">0</span>
+            </a>
+            
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div class="shop-header">
+        <h1>Our Products</h1>
+        <p>Fresh from farm to your table</p>
+        <div class="categories">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="vegetables">Vegetables</button>
+            <button class="category-btn" data-category="fruits">Fruits</button>
+            <button class="category-btn" data-category="meats">Meats</button>
+        </div>
+    </div>
+
+    <div class="filter-sort">
+        <span style="align-self: center; font-weight: 500;">Showing: <span id="productsCount">0</span> items</span>
+        <select id="sortSelect" style="padding: 10px; border-radius: 8px; border: 1px solid #ddd;">
+            <option value="default">Sort by Default</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+        </select>
+    </div>
+
+    <section class="product-grid-section" style="padding-top: 20px;">
+        <div class="product-container" id="productsContainer">
+            </div>
+        <div class="pagination" id="pagination"></div>
+    </section>
+
+    <div class="product-modal" id="productModal">
+        <div class="modal-box">
+            <span class="modal-close" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+            <div class="image-wrap" style="flex:1; height: auto;">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-info" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+                <h2 id="modalName" style="font-size: 2rem; margin-bottom: 10px;"></h2>
+                <p id="modalPrice" style="font-size: 1.5rem; color: var(--main-color); font-weight: 700; margin-bottom: 15px;"></p>
+                <p id="modalReviews" style="color: gold; margin-bottom: 15px;"></p>
+                <p id="modalDesc" style="color: #666; margin-bottom: 30px; line-height: 1.6;"></p>
+                <button class="btn cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="site-footer">
+        <p class="copyright">© 2024 Farm2U. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/JS/shop.js"></script>
+    <script src="assets/JS/products.js"></script>
+    <script src="assets/JS/utils.js"></script>
+    <script src="assets/JS/cart.js"></script>
+    <script src="assets/JS/dashboard.js"></script>
+    <script src="assets/JS/auth.js"></script>
+    <script src="assets/JS/main.js"></script>
+
+</body>
+</html>

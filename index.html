@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm2U - Home</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">Farm<span>2U</span></a>
+        <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="icons">
+            <a href="#" id="searchIcon"><i class="ri-search-line"></i></a>
+            <a href="auth.html" id="user-btn"><i class="ri-user-line"></i></a>
+            <a href="cart.html" style="position: relative;">
+                <i class="ri-shopping-cart-line"></i>
+                <span id="cartCount" style="display: none; background: red; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; position: absolute; top: -5px; right: -5px; display: flex; align-items: center; justify-content: center;">0</span>
+            </a>
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <section class="home" id="main">
+        <div class="home-text">
+            <h4>Welcome to <span class="brown">Farm</span><span class="green">2U</span></h4>
+            <h1>Cutting Out the Middlemen, <br>Not the Farmers</h1>
+            <a href="#" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section class="feature">
+        <div class="middle-text">
+            <h2>Farm-fresh <span>Categories</span></h2>
+        </div>
+        <div class="feature-content">
+            <div class="row">
+                <div class="row-text">
+                    <h6>Fresh vegetables</h6>
+                    <h3>Healthy food</h3>
+                    <a href="shop.html?category=vegetables" class="row-btn">Shop</a>
+                </div>
+                <div class="row-img"><img src="assets/images/veggie.png" alt="Veg"></div>
+            </div>
+            <div class="row row2">
+                <div class="row-text">
+                    <h6>Fresh meats</h6>
+                    <h3>Protein Rich</h3>
+                    <a href="shop.html?category=meats" class="row-btn">Shop</a>
+                </div>
+                <div class="row-img"><img src="assets/images/chimcken.png" alt="Meat"></div>
+            </div>
+            <div class="row row3">
+                <div class="row-text">
+                    <h6>Fresh fruits</h6>
+                    <h3>Sweet & Juicy</h3>
+                    <a href="shop.html?category=fruits" class="row-btn">Shop</a>
+                </div>
+                <div class="row-img"><img src="assets/images/apple.png" alt="Fruit"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="welcome-modal" id="welcomeModal">
+        <div class="modal-box" style="flex-direction: column; align-items: center; text-align: center; max-width: 500px;">
+            <span class="modal-close" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+            <img src="assets/images/logo.svg" style="width: 120px; margin-bottom: 20px;" alt="Logo">
+            <h2>About Farm<span style="color:rgb(87, 213, 87);">2U</span></h2>
+            <p style="color: #666; line-height: 1.6;">
+                Farm 2U offers a digital marketplace platform that enables farmers to sell both pre-harvest
+                and harvested agricultural products directly to buyers, providing tools for crop listings,
+                fair pricing, and local connections.
+            </p>
+        </div>
+    </div>
+
+    <div class="product-modal" id="productModal">
+        <div class="modal-box">
+            <span class="modal-close" style="position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+            <div class="image-wrap" style="flex:1; height: auto;">
+                <img id="modalImg" src="" alt="">
+            </div>
+            <div class="modal-info" style="flex:1; display:flex; flex-direction:column; justify-content:center;">
+                <h2 id="modalName" style="font-size: 2rem; margin-bottom: 10px;"></h2>
+                <p id="modalPrice" style="font-size: 1.5rem; color: var(--main-color); font-weight: 700; margin-bottom: 15px;"></p>
+                <p id="modalReviews" style="color: gold; margin-bottom: 15px;"></p>
+                <p id="modalDesc" style="color: #666; margin-bottom: 30px; line-height: 1.6;"></p>
+                <button class="btn cart-btn">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" class="contact-section">
+        <div class="middle-text"><h2>Contact <span>Us</span></h2></div>
+        <div class="contact-container">
+            <div>
+                <h3>Get in Touch</h3>
+                <p><i class="ri-map-pin-line"></i> 123 Farm Street, Agriculture City</p>
+                <p><i class="ri-phone-line"></i> +1 (234) 567-8900</p>
+                <p><i class="ri-mail-line"></i> support@farm2u.com</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="5" placeholder="Message"></textarea>
+                <button class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Farm2U</h3>
+                <p>Fresh produce directly from farmers to your table.</p>
+            </div>
+            <div>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="shop.html">Shop</a>
+                <a href="cart.html">Cart</a>
+            </div>
+            <div>
+                <h3>Support</h3>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <p class="copyright">© 2024 Farm2U. All rights reserved.</p>
+    </footer>
+
+    <script src="assets/JS/products.js"></script>
+    <script src="assets/JS/utils.js"></script>
+    <script src="assets/JS/cart.js"></script>
+    <script src="assets/JS/dashboard.js"></script>
+    <script src="assets/JS/auth.js"></script>
+    <script src="assets/JS/main.js"></script>
+</body>
+</html>

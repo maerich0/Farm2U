@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm2U - Join</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-container">
+            <a href="index.html" class="logo" style="display: block; text-align: center; margin-bottom: 20px;">Farm<span>2U</span></a>
+            
+            <div class="role-switch">
+                <button type="button" class="role-btn active" data-role="consumer">Consumer</button>
+                <button type="button" class="role-btn" data-role="business">Business</button>
+                <button type="button" class="role-btn" data-role="farmer">Farmer</button>
+            </div>
+
+            <h2 id="formTitle" style="text-align: center; margin-bottom: 20px;">Login</h2>
+
+            <form id="authForm">
+                <div id="signupFields" style="display: none;">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" placeholder="John Doe">
+                    </div>
+                </div>
+                
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="email" placeholder="example@email.com" required>
+                </div>
+                
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="pass" placeholder="••••••••" required>
+                </div>
+
+                <div class="error-message" id="emailError" style="color: red; display: none; margin-bottom: 10px; text-align: center;"></div>
+
+                <button type="submit" class="submit-btn" id="btnText">Login</button>
+            </form>
+
+            <p class="toggle-form" id="toggleText">Don't have an account? Sign Up</p>
+        </div>
+    </div>
+
+    <script src="assets/JS/products.js"></script>
+    <script src="assets/JS/utils.js"></script>
+    <script src="assets/JS/cart.js"></script>
+    <script src="assets/JS/dashboard.js"></script>
+    <script src="assets/JS/auth.js"></script> 
+    </body>
+</html>
