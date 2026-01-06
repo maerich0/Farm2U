@@ -198,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
                 
                 if (AuthManager.signup(name, email, password, currentRole)) {
-                    alert(`Account created successfully as a ${capitalize(currentRole)}!`);
                     window.location.href = 'index.html';
                 } else {
                     errorEl.textContent = 'User with this email already exists';
